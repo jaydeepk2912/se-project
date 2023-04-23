@@ -15,6 +15,8 @@ import BookingPage from "./pages/BookingPage";
 import Appointments from "./pages/Appointments";
 import DoctorAppointments from "./pages/doctor/DoctorAppointments";
 import Insurance from "./pages/Insurance";
+import InsuranceDash from "./pages/insurance/InsuranceDash";
+
 function App() {
   const { loading } = useSelector((state) => state.alerts);
   return (
@@ -71,6 +73,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Insurance />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/insurancedashboard"
+              element={
+                <ProtectedRoute>
+                  <InsuranceDash />
                 </ProtectedRoute>
               }
             />
